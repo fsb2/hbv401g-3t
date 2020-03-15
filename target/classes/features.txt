@@ -1,0 +1,8 @@
+Gullfoss;foss;64.3288;-20.1184
+þingvellir;stadir;64.2534;-21.1391
+Patreksfjörður;fuglar;65.6243;-24.0244
+Húsavík;hvalur;66.0504;-17.3529
+Eykafjallajökull;gos;63.641;-19.611
+Snorri Sturluson;viking;64.6156;-21.6788
+KEF International Airport;flugvollur;63.9856;-22.6236
+Jökulsáarlón;jokull;64.0674;-16.2124
