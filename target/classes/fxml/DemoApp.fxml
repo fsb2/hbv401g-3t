@@ -24,26 +24,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 
-<AnchorPane prefHeight="873.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hbv401.t3.Controller">
+<AnchorPane prefHeight="873.0" prefWidth="828.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hbv401.t3.MapController">
    <children>
       <TextField layoutX="588.0" layoutY="41.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="41.0" />
       <Button layoutX="697.0" layoutY="79.0" mnemonicParsing="false" text="LogIn" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="79.0" />
       <BorderPane layoutX="70.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="689.0" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="189.0">
-          <bottom>
-              <HBox alignment="CENTER_LEFT" spacing="5.0" BorderPane.alignment="CENTER">
-                  <children>
-                      <Label fx:id="labelCenter" text="Center: " />
-                      <Label fx:id="labelExtent" text="Extent: " />
-                      <Label fx:id="labelZoom" text="Zoom: " />
-                      <Label fx:id="labelEvent" text="Event: " />
-                  </children>
-                  <padding>
-                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                  </padding>
-              </HBox>
-          </bottom>
          <center>
               <MapView fx:id="mapView" prefHeight="469.0" prefWidth="769.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
