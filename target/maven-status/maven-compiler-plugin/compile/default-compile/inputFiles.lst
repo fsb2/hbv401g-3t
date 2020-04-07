@@ -1,5 +1,10 @@
-/home/skuli/NetBeansProjects/hbv401g-3t/src/main/java/hbv401/t3/MapController.java
-/home/skuli/NetBeansProjects/hbv401g-3t/src/main/java/hbv401/t3/SystemInfo.java
-/home/skuli/NetBeansProjects/hbv401g-3t/src/main/java/module-info.java
-/home/skuli/NetBeansProjects/hbv401g-3t/src/main/java/hbv401/t3/App.java
-/home/skuli/NetBeansProjects/hbv401g-3t/src/main/java/hbv401/t3/MapFeature.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/controllers/UserController.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/entities/UserEntity.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/entities/MapEntity.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/entities/OfferEntity.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/Main.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/controllers/MapController.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/controllers/LoginController.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/SystemInfo.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/controllers/MainController.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/hbv401g-3t/src/main/java/entities/ProfileEntity.java

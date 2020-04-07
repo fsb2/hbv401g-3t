@@ -1,0 +1,19 @@
+/* 
+    The stylings of the main window.
+
+    Created on : Apr 2, 2020, 1:42:17 PM
+    Author     : hjortur
+*/
+
+#vbMainWindow{
+    -fx-pref-width:600px;
+    -fx-pref-height:600px;
+}
+
+#vbFirstHalf{
+    -fx-pref-height:300px;
+}
+
+#vbSearch{
+    -fx-padding:10px 5px 10px 5px;
+}
