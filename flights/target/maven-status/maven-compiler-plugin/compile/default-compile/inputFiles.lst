@@ -1,0 +1,13 @@
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/datastructures/Person.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/datastructures/Airplain.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/datastructures/Airport.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/sqlite/SqlTest.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/datastructures/Flight.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/BookingCLI.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/datastructures/Booking.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/FlightCLI.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/database/FlightDB.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/controllers/PersonMananger.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/controllers/BookingMananger.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/controllers/FlightMananger.java
+/home/hjortur/Desktop/Vor_20/Þróun/hjortur/flights/src/main/java/hbv401g/t3/flights/sqlite/DBConnection.java

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="hbv401g.t3.flights">
+    <module_version install_time="1586288534271" last="true" origin="installer" specification_version="1.0">
+        <file crc="1855205505" name="config/Modules/hbv401g-t3-flights.xml"/>
+        <file crc="464773609" name="modules/hbv401g-t3-flights.jar"/>
+    </module_version>
+</module>
