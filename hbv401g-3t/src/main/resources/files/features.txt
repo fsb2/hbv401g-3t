@@ -1,8 +1,147 @@
-Gullfoss;foss;64.3288;-20.1184
-þingvellir;stadir;64.2534;-21.1391
-Patreksfjörður;fuglar;65.6243;-24.0244
+Akureyri;flugvollur;65.662342;-18.070091
+Arnanes Country;hotel;64.3027686;-15.2103707
+Arnarstapi;stadir;64.769;-23.624
+Bildudalur;flugvollur;65.641272;-23.5516269
+Bjarg;hotel;64.93305;-14.0181
+Bruarfoss;foss;64.26425619999999;-20.5157062
+Byggðasafn Glaumbær;safn;65.6106481;-19.5041013
+Byggðasafnið Skógum;safn;63.52624239999999;-19.4926421
+Country Hotel Hofdabrekka;hotel;63.4263298;-18.9045524
+Dettifoss;foss;65.8146661;-16.384576
+Dimmuborgir;gos;65.586039;-16.91431
+Djupalonssandur;stadir;64.7520402548378;-23.90097141265869
+Dynjandi;foss;65.7737729;-23.1724209
+Egilsstadir;flugvollur;65.281722;-14.393374
+Eiriksstadir;viking;65.063971225041;-21.3975048065186
+Eldfell;gos;63.4320503;-20.2494335
+Eyjafjallajökull Erupts;safn;63.5429411;-19.6677804
+Eyjafjallajökull;gos;63.641;-19.611
+Faxi;foss;64.2254193;-20.3372209
+Faxi;foss;64.22541939999999;-20.3372209
+Fosshotel Reykholt;hotel;64.6648369;-21.2914181
+Fosshotel Skaftafell;hotel;63.98846;-16.878775
+Fosshotel Vatnajokull;hotel;64.3554441;-15.2656209
+Geysir Museum;safn;64.3115;-20.3071
+Gjogur;flugvollur;65.986805;-21.352024
+Glaumbær;stadir;65.7461;-19.6394
+Glymur;foss;64.3958333333333;-21.2411111111111
+Golfclub Leynir;golf;64.3173882;-22.0298582
+Goðafoss Waterfall;foss;65.6827782;-17.5501918
+Goðafoss;foss;65.6827782;-17.5501918
+Grand Hótel Reykjavík;hotel;64.1423264;-21.8896294
+Guesthouse Egilsstaðir;hotel;65.2667455;-14.395051
+Guesthouse Lyngholt;hotel;66.2003984;-15.3379426
+Guesthouse Skálafell;hotel;64.2446046;-15.6782175
+Gufu;foss;65.2398959;-14.0575765
+Gullfoss;foss;64.3270716;-20.1199478
+Hamarsvöllur;golf;64.57471319999999;-21.8777292
+Herring Era Museum;safn;66.146992;-18.913227
+Hnappavellir;hike;63.890214;-16.596265
+Hof 1 Hotel;hotel;63.90711269999999;-16.7059779
+Hornafjordur;flugvollur;64.2951129;-15.228306
+Hotel Anna;hotel;63.56811999999999;-19.797706
+Hotel Cabin;hotel;64.1460548;-21.8942232
+Hotel Dyrholaey;hotel;63.4483128;-19.1425717
+Hotel Edda Isafjordur;hotel;66.0740528;-23.1319713
+Hotel Edda Laugarbakki;hotel;65.325302;-20.89119
+Hotel Edda Nesjum;hotel;64.2563629;-15.2086276
+Hotel Edda Neskaupsstadur;hotel;65.1474586;-13.6711979
+Hotel Framtid;hotel;64.6566804;-14.2815683
+Hotel Hali;hotel;64.129774;-16.017792
+Hotel Hellissandur;hotel;64.9166398;-23.9001746
+Hotel Hellnar;hotel;64.7464932;-23.6715888
+Hotel Keilir;hotel;64.0024502;-22.552837
+Hotel Laki Efri-Vik;hotel;63.7736118;-17.9620457
+Hotel Skogar;hotel;63.5247616;-19.5065402
+Hotel Stadarborg;hotel;64.8035196;-14.126358
+Hraunfossar;foss;64.7029005;-20.9771716
+Husavik;flugvollur;65.952328;-17.4259779
+Hverir;geysir;65.6417037019682;-16.8075156211853
+Hólmsvöllur;golf;64.04299069999999;-22.5940191
+Hótel Breiðavík;hotel;65.5499262;-24.3519473
+Hótel Edda Sælingsdal;hotel;65.2462324;-21.8045139
+Hótel Edda Vík;hotel;66.1336;-18.7534
+Hótel Höfn;hotel;64.2575104;-15.2125722
+Hótel Norðurljós;hotel;66.4578641;-15.9491852
+Hótel Núpur;hotel;65.9286349;-23.6204338
+Hótel Reynihlíð;hotel;65.6452645;-16.9149951
+Hótel Selfoss;hotel;63.93734000000001;-21.0068967
+Hótel Snæfell;hotel;65.260727;-14.001169
+Hótel Stykkishólmur;hotel;65.0723284;-22.7253883
+Hótel Tangi;hotel;65.7559181;-14.8254494
+Hótel Tindastóll;hotel;65.7517939;-19.6521699
+Húsavík Guesthouse;hotel;66.04883;-17.34899
 Húsavík;hvalur;66.0504;-17.3529
-Eykafjallajökull;gos;63.641;-19.611
-Snorri Sturluson;viking;64.6156;-21.6788
-KEF International Airport;flugvollur;63.9856;-22.6236
+Hústóftavöllur;golf;63.8327318;-22.5107003
+Icelandair Hotel Akureyri;hotel;65.6790328;-18.1002116
+Icelandair Hotel Fludir;hotel;64.13181;-20.32368
+Icelandair Hotel Klaustur;hotel;63.7886471;-18.0532837
+Icelandic Wartime Museum;safn;65.034571;-14.213958
+Jaðarsvöllur;golf;65.6659487;-18.1157812
 Jökulsáarlón;jokull;64.0674;-16.2124
+KEF International Airport;flugvollur;63.9856;-22.6236
+Kerið;gos;64.041278;-20.885138
+Kirkjufell;fjall;64.9416667;-23.3069444
+Kirkjufellsfoss;foss;64.9261558;-23.311401399
+Kiðjabergsvöllur;golf;63.9990914;-20.7765082
+Krafla;gos;65.7333333;-16.7833333
+Krisuvik;geysir;63.894728;-22.051234
+Laufás Museum;safn;65.8941789;-18.0724454
+Látrabjarg;fuglar;65.5025723;-24.5316981999999
+Múlafoss;foss;64.7577949;-14.5097705
+Náttúrugripasafn Bolungarvíkur;safn;66.1573631;-23.24961619999999
+Patreksfjörður;fuglar;65.6243;-24.0244
+Plane Crash Site;stadir;63.459101419612;-19.3647176027298
+Rafting;raft;65.4646305;-19.3483733
+Raudanes;fjall;66.2308693831452;-15.723237991333
+Reykjavik Domestic;flugvollur;64.129448;-21.9388889
+Seljalandsfoss;foss;63.61587179999999;-19.9871285
+Selsvöllur;golf;64.139781;-20.3557232
+Skorhagafoss;foss;64.3582443;-21.400785
+Skógafoss;foss;63.5320523;-19.5113705
+Snorri Sturluson;viking;64.6156;-21.6788
+Strandarvöllur;golf;63.7989636;-20.2989635
+Surtshellir;gos;64.781514;-20.7238199999999
+Sögusetur íslenska hestsins;safn;65.7328486;-19.112884
+The Icelandic Saltfish Museum;safn;63.8396846;-22.4322367
+The Icelandic Sea Monster Museum;safn;65.6866671;-23.5976887
+The Saga Center;viking;63.75;-20.2333333
+Thjorsardalur;hike;64.1055556;-19.8983333
+Vagnsstaðir;hotel;64.1783898;-15.8706093
+Varmahlid;hotel;65.5528376;-19.4476777
+Vestmannaeyjar;flugvollur;63.423889;-20.27861
+Volcano Museum;safn;65.0763559;-22.7256015
+Vífilsstaðavöllur;golf;64.0867766;-21.8749685
+Waterfall Seljalandsfoss;foss;63.61587179;-19.9871285
+Whale Tours;hvalur;66.0739484457419;-18.6510944366455
+Whale Watching Husavik;hvalur;66.046195;-17.345921
+Ísafjörður;flugvollur;66.0580555;-23.1352777
+Þorláksvöllur;golf;63.875393;-21.3755199
+þingvellir;stadir;64.2534;-21.1391
+Ingólfshöfði;fuglar;63.860594;-16.668212
+Langjökull;jokull;64.6507839;-20.5826515
+Vestmannaeyjar;fuglar;63.44407052528406;-20.2502151659612
+Raudfeldsgja;raft;64.7981750857992;-23.637535572052
+Koluglujufur;raft;65.3323988517985;-20.5707835529597
+Drumbo;raft;64.2289803;-20.2850481
+Heinagerg;raft;64.2978467;-15.6701545999999
+Hestaland;horse;64.6428308;-21.804716
+Snæfellsnes horse riding;horse;64.82896265054957;-22.98251671493968
+Highlands horse riding;horse;63.83507586031855;-20.38380976516543
+Kjölur route horse riding;horse;65.04266527561641;-19.63733525631586
+North Iceland horse riding;horse;65.6485245304092;-19.55360650053834
+Strandir;hike;65.85529244995948;-21.33827879915476
+Spákonufell;hike;65.84011354267075;-20.23426725997501
+Valagil;hike;65.95803884739722;-23.10252271651713
+Ásbyrgi;hike;66.01315844625843;-16.50542778770835
+Stórurð;hike;65.51587848034623;-14.01586570666584
+Grákinn;hike;64.4388238410261;-14.87588488003604
+Hornstrandir;hike;66.38927740420925;-22.80701011601894
+Hrafntinnusker;hike;63.933629;-19.168546
+Emstrur-Botnar;hike;63.765992;-19.3739820000001
+Þórsmerkurvegur;hike;63.6761901;-19.4693835
+Fimmvörðuháls;hike;63.6211155;-19.4408622
+Ljótipollur;hike;64.0361938;-18.9991187000001
+Landmannalaugar;hike;63.990644;-19.0607
+Skaftafell;hike;64.02429888494072;-16.94801958713041
+Nauthúsagil;hike;63.64049433349886;-19.90435210758694

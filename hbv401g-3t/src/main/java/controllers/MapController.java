@@ -128,7 +128,7 @@ private void initialize() {
         for (MapEntity mf : mapFeatures) {
 //            if (Arrays.asList(profileFeatures).contains(mf.getCategory())){
                     final String str = mf.getCategory();
-                    final String label = "/".concat(str).concat(".png");
+                    final String label = "/pictures/".concat(str).concat(".png");
                     final Coordinate cord = new Coordinate(mf.getCoordX(), mf.getCoordY());
                     final Marker marker = new Marker(getClass().getResource(label), -20, -20).setPosition(cord).setVisible(true);
                     marker.attachLabel(new MapLabel(mf.getName(),20,20));
