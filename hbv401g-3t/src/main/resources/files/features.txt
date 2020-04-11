@@ -21,7 +21,7 @@ Faxi;foss;64.22541939999999;-20.3372209
 Fosshotel Reykholt;hotel;64.6648369;-21.2914181
 Fosshotel Skaftafell;hotel;63.98846;-16.878775
 Fosshotel Vatnajokull;hotel;64.3554441;-15.2656209
-Geysir Museum;safn;64.3115;-20.3071
+Geysir;geysir;64.3115;-20.3071
 Gjogur;flugvollur;65.986805;-21.352024
 Glaumbær;stadir;65.7461;-19.6394
 Glymur;foss;64.3958333333333;-21.2411111111111

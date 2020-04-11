@@ -11,13 +11,9 @@ import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import java.util.List;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 import javafx.fxml.FXMLLoader;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -38,7 +34,7 @@ public class MapController {
     final private List<MapEntity> mapFeatures;
 
     private Map<String, Marker> features = new HashMap<>();
-    
+
     public MapController() {
         mapFeatures = new ArrayList<>();
     }
@@ -50,7 +46,7 @@ public class MapController {
         //initMapAndControls();
         initialize();
     }
-    
+
     public void setFeatureAndInitMap(String mapFeature){
      //   initFeature(mapFeature);
         initialize();
@@ -60,9 +56,9 @@ public class MapController {
         try (InputStreamReader inputReader = new InputStreamReader(getClass()
                     .getResourceAsStream(mapFeature));
                 Scanner input = new Scanner(inputReader)) {
-                
+
                 input.useDelimiter(";|\n");
-                
+
                 while (input.hasNext()) {
                     String name = input.next();
                     System.out.print(name);
@@ -71,17 +67,17 @@ public class MapController {
                     double y = input.nextDouble();
                     mapFeatures.add(new MapEntity(name, category, x, y));
                 }
-        
+
                 input.close();
                 inputReader.close();
-                
-                
+
+
         } catch (IOException ex) {
             System.out.println(ex.getCause());
         }
     }
-    
-private void initialize() {    
+
+    private void initialize() {
         try {
             String fxmlMap = "/fxml/FXMLMap.fxml";
             locationMap = FXMLLoader.load(getClass().getResource(fxmlMap));
@@ -89,7 +85,7 @@ private void initialize() {
         } catch (IOException ex) {
             System.out.println(ex.getCause());
         }
-     
+
     }
 
     // This returns the actual map.
@@ -98,19 +94,20 @@ private void initialize() {
                 locationMap.initializedProperty().addListener((observable, oldValue, newValue) -> {
                 if (newValue) {
                     afterMapIsInitialized();
-                }   
+                }
         });
-        
-        
+
+
         setupEventHandlers();
 
         locationMap.initialize(Configuration.builder()
             .projection(projection)
             .build());
-        
+
         return locationMap;
     }
-  private void setupEventHandlers() {
+
+    private void setupEventHandlers() {
         locationMap.addEventHandler(MapLabelEvent.MAPLABEL_CLICKED, event -> {
                 event.consume();
                 String orig = event.getMapLabel().getText();
@@ -124,7 +121,7 @@ private void initialize() {
     }
 
     private void afterMapIsInitialized(){
-        
+
         for (MapEntity mf : mapFeatures) {
 //            if (Arrays.asList(profileFeatures).contains(mf.getCategory())){
                     final String str = mf.getCategory();
