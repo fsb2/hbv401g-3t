@@ -65,7 +65,8 @@ public class MapController {
                     String category = input.next();
                     double x = input.nextDouble();
                     double y = input.nextDouble();
-                    mapFeatures.add(new MapEntity(name, category, x, y));
+                    int area = input.nextInt();
+                    mapFeatures.add(new MapEntity(name, category, x, y,area));
                 }
 
                 input.close();

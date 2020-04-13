@@ -8,12 +8,14 @@ public class MapEntity {
     private final String name;
     private final String category;
     private final double coordX, coordY;
+    private final int area;
 
-    public MapEntity(String name, String category, double x, double y) {
+    public MapEntity(String name, String category, double x, double y, int area) {
         this.name = name;
         this.category = category;
         coordX = x;
         coordY = y;
+        this.area = area;
     }
 
     public String getName(){
@@ -27,5 +29,8 @@ public class MapEntity {
     }
     public double getCoordY(){
         return coordY;
+    }
+    public int area(){
+        return area;
     }
 }
