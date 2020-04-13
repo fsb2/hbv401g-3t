@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-OpenIDE-Module-Localizing-Bundle: hbv401g/t3/flights3/Bundle.properties
-

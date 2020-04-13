@@ -10,16 +10,15 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import java.util.List;
 import java.util.Scanner;
 import javafx.fxml.FXMLLoader;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  * This is the controller for the map.
  */
-
 public class MapController {
 
     @FXML
@@ -43,34 +42,27 @@ public class MapController {
         mapFeatures = new ArrayList<>();
 
         initFeature(mapFeature);
-        //initMapAndControls();
-        initialize();
-    }
-
-    public void setFeatureAndInitMap(String mapFeature){
-     //   initFeature(mapFeature);
         initialize();
     }
 
     private void initFeature(String mapFeature) {
         try (InputStreamReader inputReader = new InputStreamReader(getClass()
-                    .getResourceAsStream(mapFeature));
+                .getResourceAsStream(mapFeature));
                 Scanner input = new Scanner(inputReader)) {
 
-                input.useDelimiter(";|\n");
+            input.useDelimiter(";|\n");
 
-                while (input.hasNext()) {
-                    String name = input.next();
-                    System.out.print(name);
-                    String category = input.next();
-                    double x = input.nextDouble();
-                    double y = input.nextDouble();
-                    mapFeatures.add(new MapEntity(name, category, x, y));
-                }
+            while (input.hasNext()) {
+                String name = input.next();
+                System.out.print(name);
+                String category = input.next();
+                double x = input.nextDouble();
+                double y = input.nextDouble();
+                mapFeatures.add(new MapEntity(name, category, x, y));
+            }
 
-                input.close();
-                inputReader.close();
-
+            input.close();
+            inputReader.close();
 
         } catch (IOException ex) {
             System.out.println(ex.getCause());
@@ -81,7 +73,6 @@ public class MapController {
         try {
             String fxmlMap = "/fxml/FXMLMap.fxml";
             locationMap = FXMLLoader.load(getClass().getResource(fxmlMap));
-            locationMap.initialize();
         } catch (IOException ex) {
             System.out.println(ex.getCause());
         }
@@ -90,50 +81,53 @@ public class MapController {
 
     // This returns the actual map.
     public MapView mapBox(Projection projection) {
-        locationMap.setCustomMapviewCssURL(getClass().getResource("/custom_mapview.css"));
-                locationMap.initializedProperty().addListener((observable, oldValue, newValue) -> {
-                if (newValue) {
-                    afterMapIsInitialized();
-                }
-        });
 
+        locationMap.initializedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                afterMapIsInitialized();
+            }
+        });
 
         setupEventHandlers();
 
         locationMap.initialize(Configuration.builder()
-            .projection(projection)
-            .build());
+                .projection(projection)
+                .build());
 
         return locationMap;
     }
 
     private void setupEventHandlers() {
         locationMap.addEventHandler(MapLabelEvent.MAPLABEL_CLICKED, event -> {
-                event.consume();
-                String orig = event.getMapLabel().getText();
-                tripFrom.setText(orig);
-            });
-            locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED, event -> {
-                event.consume();
-                String dest = event.getMapLabel().getText();
-                tripTo.setText(dest);
-            });
+            event.consume();
+            String orig = event.getMapLabel().getText();
+            tripFrom.setText(orig);
+        });
+
+        locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED, event -> {
+            event.consume();
+            String dest = event.getMapLabel().getText();
+            tripTo.setText(dest);
+        });
     }
 
-    private void afterMapIsInitialized(){
-
-        for (MapEntity mf : mapFeatures) {
-//            if (Arrays.asList(profileFeatures).contains(mf.getCategory())){
-                    final String str = mf.getCategory();
-                    final String label = "/pictures/".concat(str).concat(".png");
-                    final Coordinate cord = new Coordinate(mf.getCoordX(), mf.getCoordY());
-                    final Marker marker = new Marker(getClass().getResource(label), -20, -20).setPosition(cord).setVisible(true);
-                    marker.attachLabel(new MapLabel(mf.getName(),20,20));
-                    locationMap.addMarker(marker);
-                    features.put(marker.getId(), marker);
-//            }
-        }
+    private void afterMapIsInitialized() {
+        mapFeatures.stream().map((mf) -> {
+            final String str = mf.getCategory();
+            final String label = "/pictures/" + str + ".png";
+            final Coordinate cord = new Coordinate(mf.getCoordX(), mf.getCoordY());
+            final Marker marker = new Marker(getClass().getResource(label), -20, -20).setPosition(cord).setVisible(true);
+            marker.attachLabel(new MapLabel(mf.getName(), 20, 20));
+            return marker;
+        }).map((marker) -> {
+            locationMap.addMarker(marker);
+            return marker;
+        }).forEachOrdered((marker) -> {
+            features.put(marker.getId(), marker);
+        });
+        
         locationMap.setZoom(6);
+        
         //Island
         locationMap.setCenter(new Coordinate(65.178, -17.919));
     }

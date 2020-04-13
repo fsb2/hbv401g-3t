@@ -70,11 +70,6 @@
             <version>2.2.1</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>hbv401g.t3</groupId>
-            <artifactId>flights</artifactId>
-            <version>1.0</version>
-        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 
 /**
  * This is the controller for the main window.
- * @author hjortur
  */
 
 public class MainController {
@@ -19,7 +18,8 @@ public class MainController {
    @FXML
    private Button btnSignIn, btnSignUp;
 
-   @FXML Label lblSearch, lblFromDate, lblToDate;
+   @FXML
+   private Label lblSearch, lblFromDate, lblToDate, lblHotels, lblFlights;
    
    public MainController() {        
    } 
@@ -32,8 +32,8 @@ public class MainController {
         lblSearch.setText("Search engine");
         lblFromDate.setText("From");
         lblToDate.setText("To");
-
-        
+        lblHotels.setText("Hotel list");
+        lblFlights.setText("Flight list");
         
         signInButtonHandler();
         signUpButtonHandler();

@@ -1,8 +1,8 @@
 /* The stylings of the map. */
 
 #locationMap{
-    -fx-pref-width:200px;
-    -fx-pref-height:200px;
+    -fx-pref-height:500px;
+    -fx-padding:0 0 5px 0;
 }
 
 .red-label {
