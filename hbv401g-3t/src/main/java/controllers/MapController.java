@@ -52,13 +52,27 @@ public class MapController {
 
             input.useDelimiter(";|\n");
 
+                input.useDelimiter(";|\n");
+
+                while (input.hasNext()) {
+                    String name = input.next();
+                    System.out.print(name);
+                    String category = input.next();
+                    double x = input.nextDouble();
+                    double y = input.nextDouble();
+                    int area = input.nextInt();
+                    mapFeatures.add(new MapEntity(name, category, x, y,area));
+                }
+
+
             while (input.hasNext()) {
                 String name = input.next();
                 System.out.print(name);
                 String category = input.next();
                 double x = input.nextDouble();
                 double y = input.nextDouble();
-                mapFeatures.add(new MapEntity(name, category, x, y));
+                       int area = input.nextInt();
+                    mapFeatures.add(new MapEntity(name, category, x, y,area));
             }
 
             input.close();
