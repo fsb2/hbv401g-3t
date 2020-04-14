@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 /**
  * This is the concrete class for the users.
- * @author hjortur
  */
 
 public class UserEntity {

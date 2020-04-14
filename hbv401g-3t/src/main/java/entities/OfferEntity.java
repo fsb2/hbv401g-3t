@@ -8,13 +8,17 @@ import java.util.Date;
  */
 
 public class OfferEntity {
-    private final String name;
-    private final String category;
-    private final double coordX, coordY;
-    private final Date startDate;
-    private final Date endDate;
-    private final Currency cost;
+    private String name;
+    private String category;
+    private double coordX, coordY;
+    private Date startDate;
+    private Date endDate;
+    private Currency cost;
 
+    // Default constructor.
+    public OfferEntity(){        
+    }
+    
     public OfferEntity(String name, String category, double coordX, 
             double coordY, Date startDate, Date endDate, Currency cost) {
         

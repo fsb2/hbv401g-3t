@@ -3,7 +3,7 @@
 */
 
 #gpMainWindow{
-    -fx-pref-width:700px;
+    -fx-pref-width:1000px;
     -fx-pref-height:700px;
     -fx-padding:10px;
 }
@@ -16,7 +16,14 @@
     -fx-padding:5px;
 }
 
-.lv{
+.tv{
     -fx-max-height:100px;
+}
 
+#tvFlights{
+     -fx-min-width:600px;
+}
+
+#tvHotels{
+    -fx-max-width:170px;
 }

@@ -52,26 +52,13 @@ public class MapController {
 
             input.useDelimiter(";|\n");
 
-                input.useDelimiter(";|\n");
-
-                while (input.hasNext()) {
-                    String name = input.next();
-                    System.out.print(name);
-                    String category = input.next();
-                    double x = input.nextDouble();
-                    double y = input.nextDouble();
-                    int area = input.nextInt();
-                    mapFeatures.add(new MapEntity(name, category, x, y,area));
-                }
-
             while (input.hasNext()) {
                 String name = input.next();
-                System.out.print(name);
                 String category = input.next();
                 double x = input.nextDouble();
                 double y = input.nextDouble();
-                       int area = input.nextInt();
-                    mapFeatures.add(new MapEntity(name, category, x, y,area));
+                int area = input.nextInt();
+                mapFeatures.add(new MapEntity(name, category, x, y, area));
             }
 
             input.close();
@@ -94,12 +81,12 @@ public class MapController {
 
     // This returns the actual map.
     public MapView mapBox(Projection projection) {
-
-        locationMap.initializedProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue) {
-                afterMapIsInitialized();
-            }
-        });
+        locationMap.initializedProperty()
+                .addListener((observable, oldValue, newValue) -> {
+                    if (newValue) {
+                        afterMapIsInitialized();
+                    }
+                });
 
         setupEventHandlers();
 
@@ -117,19 +104,25 @@ public class MapController {
             tripFrom.setText(orig);
         });
 
-        locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED, event -> {
-            event.consume();
-            String dest = event.getMapLabel().getText();
-            tripTo.setText(dest);
-        });
+        locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED,
+                event -> {
+
+                    event.consume();
+                    String dest = event.getMapLabel().getText();
+                    tripTo.setText(dest);
+                });
     }
 
     private void afterMapIsInitialized() {
         mapFeatures.stream().map((mf) -> {
             final String str = mf.getCategory();
             final String label = "/pictures/" + str + ".png";
-            final Coordinate cord = new Coordinate(mf.getCoordX(), mf.getCoordY());
-            final Marker marker = new Marker(getClass().getResource(label), -20, -20).setPosition(cord).setVisible(true);
+            final Coordinate cord = new Coordinate(mf.getCoordX(),
+                    mf.getCoordY());
+
+            final Marker marker = new Marker(getClass().getResource(label),
+                    -20, -20).setPosition(cord).setVisible(true);
+
             marker.attachLabel(new MapLabel(mf.getName(), 20, 20));
             return marker;
         }).map((marker) -> {
@@ -138,9 +131,9 @@ public class MapController {
         }).forEachOrdered((marker) -> {
             features.put(marker.getId(), marker);
         });
-        
+
         locationMap.setZoom(6);
-        
+
         //Island
         locationMap.setCenter(new Coordinate(65.178, -17.919));
     }

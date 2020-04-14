@@ -1,8 +1,8 @@
-07:15;Reykjavík;Vestmannaeyjar;FEI760;Flugfélagið Ernir
-07:30;Reykjavík;Akureyri;NY112;Air Iceland Connect
-08:55;Reykjavík;Húsavík;FEI752;Flugfélagið Ernir
-10:15;Reykjavík;Egilsstaðir;NY326;Air Iceland Connect
-12:00;Reykjavík;Bíldudalur;FEI720;Flugfélagið Ernir
-13:30;Reykjavík;Ísafjörður;NY018;Air Iceland Connect
-14:00;Reykjavík;Hornafjörður;FEI740;Flugfélagið Ernir
-16:00;Reykjavík;Akureyri;NY166;Air Iceland Connect
+07:15;07:55;Reykjavík;Vestmannaeyjar;FEI760;Flugfélagið Ernir
+07:30;08:15;Reykjavík;Akureyri;NY112;Air Iceland Connect
+08:55;09:45;Reykjavík;Húsavík;FEI752;Flugfélagið Ernir
+10:15;11:15;Reykjavík;Egilsstaðir;NY326;Air Iceland Connect
+12:00;12:30;Reykjavík;Bíldudalur;FEI720;Flugfélagið Ernir
+13:30;14:15;Reykjavík;Ísafjörður;NY018;Air Iceland Connect
+14:00;14:30;Reykjavík;Hornafjörður;FEI740;Flugfélagið Ernir
+16:00;16:50;Reykjavík;Akureyri;NY166;Air Iceland Connect

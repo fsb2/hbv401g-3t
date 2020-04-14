@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.VBox?>
@@ -43,12 +43,12 @@
     
     <VBox styleClass="vb" GridPane.columnIndex="0" GridPane.rowIndex="3">
         <Label fx:id="lblHotels"/>
-        <ListView styleClass="lv"/>
+        <TableView styleClass="tv" fx:id="tvHotels"/>
     </VBox>
     
     <VBox styleClass="vb" GridPane.columnIndex="1" GridPane.rowIndex="3">
         <Label fx:id="lblFlights"/>
-        <ListView styleClass="lv"/>
+        <TableView styleClass="tv" fx:id="tvFlights"/>
     </VBox>
     
     <Separator GridPane.columnIndex="0"

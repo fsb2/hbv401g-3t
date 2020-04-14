@@ -17,6 +17,10 @@ public class ProfileEntity {
     private List categories; // not used at the moment.
 
     // The default constructor.
+    public ProfileEntity(){
+        this.id = Math.random();
+    }
+    
     public ProfileEntity(String profileName, UserEntity user,ArrayList<String> categories){
         this.id = Math.random();
         this.profileName = profileName;
