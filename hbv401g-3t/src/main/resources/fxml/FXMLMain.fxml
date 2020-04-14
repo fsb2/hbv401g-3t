@@ -28,7 +28,12 @@
         <Label fx:id="lblSearch"/>
         <TextField fx:id="tfSearch"/>   
     </VBox>
-       
+    
+    <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TextField fx:id="tripForm"/>
+        <TextField fx:id="tripTo"/> 
+    </VBox>
+    
     <VBox styleClass="vb"
           GridPane.columnIndex="0" GridPane.rowIndex="2">
         <Label fx:id="lblFromDate"/>

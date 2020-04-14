@@ -32,14 +32,16 @@ public class MapController {
 
     final private List<MapEntity> mapFeatures;
 
-    private Map<String, Marker> features = new HashMap<>();
+    final private Map<String, Marker> features;
 
     public MapController() {
         mapFeatures = new ArrayList<>();
+        features = new HashMap<>();
     }
 
     public MapController(String mapFeature) {
         mapFeatures = new ArrayList<>();
+        features = new HashMap<>();
 
         initFeature(mapFeature);
         initialize();
@@ -76,7 +78,6 @@ public class MapController {
         } catch (IOException ex) {
             System.out.println(ex.getCause());
         }
-
     }
 
     // This returns the actual map.
@@ -100,13 +101,13 @@ public class MapController {
     private void setupEventHandlers() {
         locationMap.addEventHandler(MapLabelEvent.MAPLABEL_CLICKED, event -> {
             event.consume();
+            
             String orig = event.getMapLabel().getText();
             tripFrom.setText(orig);
         });
 
         locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED,
                 event -> {
-
                     event.consume();
                     String dest = event.getMapLabel().getText();
                     tripTo.setText(dest);
