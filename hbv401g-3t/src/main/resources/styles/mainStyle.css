@@ -16,6 +16,7 @@
     -fx-padding:5px;
 }
 
-.tf{
+.lv{
+    -fx-max-height:100px;
 
 }

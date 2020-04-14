@@ -64,7 +64,6 @@ public class MapController {
                     mapFeatures.add(new MapEntity(name, category, x, y,area));
                 }
 
-
             while (input.hasNext()) {
                 String name = input.next();
                 System.out.print(name);
