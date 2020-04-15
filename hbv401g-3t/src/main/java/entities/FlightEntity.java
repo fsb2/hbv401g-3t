@@ -3,6 +3,7 @@ package entities;
 /**
  * This is the concrete class for the flights.
  */
+
 public class FlightEntity {
 
     private String departure, arrival, from;

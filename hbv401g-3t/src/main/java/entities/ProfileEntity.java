@@ -2,35 +2,28 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.image.Image;
 
 /**
  * This is a class which gives a user the ability to make
  * different profiles for one self, as many as the user wants.
  *
- * @author hjortur
  */
+
 public class ProfileEntity {
-    private double id; // not used at the moment.
     private String profileName;
-    private UserEntity user; // not used at the moment.
-    private List categories; // not used at the moment.
+    private UserEntity user;
+    private List categories;
 
     // The default constructor.
     public ProfileEntity(){
-        this.id = Math.random();
     }
     
-    public ProfileEntity(String profileName, UserEntity user,ArrayList<String> categories){
-        this.id = Math.random();
+    public ProfileEntity(String profileName, UserEntity user,
+            ArrayList<String> categories){
+        
         this.profileName = profileName;
         this.user = user;
         this.categories = new ArrayList<String>();
-    }
-
-    // Returns the given user's photo.
-    public Image getImage(){
-        return user.getPhoto();
     }
 
     // Returning the name of the user's profile.

@@ -4,8 +4,13 @@
 
 #gpMainWindow{
     -fx-pref-width:1000px;
-    -fx-pref-height:700px;
+    -fx-pref-height:680px;
     -fx-padding:10px;
+}
+
+#hbLogin{
+    -fx-spacing:4px;
+    -fx-padding:5px;
 }
 
 .vb{
@@ -26,4 +31,8 @@
 
 #tvHotels{
     -fx-max-width:170px;
+}
+
+.lv{
+    -fx-max-height:25px;
 }

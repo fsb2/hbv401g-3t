@@ -6,6 +6,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.VBox?>
@@ -18,22 +19,20 @@
           fx:controller="controllers.MainController"
           stylesheets="@/styles/mainStyle.css">
 
-    <HBox fx:id="hbLogin" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <Label text="User: Skúli" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    
+    <HBox fx:id="hbLogin" GridPane.columnIndex="0" GridPane.rowIndex="0"> 
         <Button fx:id="btnSignUp"/>
         <Button fx:id="btnSignIn"/>
     </HBox>
    
-    <VBox styleClass="vb" fx:id="vbSearch"
+    <VBox styleClass="vb" fx:id="vbPrice"
           GridPane.columnIndex="0" GridPane.rowIndex="1">
-        <Label fx:id="lblSearch"/>
-        <TextField fx:id="tfSearch"/>   
+        <Label fx:id="lblPrice"/>
+        <TextField fx:id="tfPrice"/>  
+        <Button fx:id="btnPrice"/> 
     </VBox>
-    
-    <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-        <TextField fx:id="tripForm"/>
-        <TextField fx:id="tripTo"/> 
-    </VBox>
-    
+
     <VBox styleClass="vb"
           GridPane.columnIndex="0" GridPane.rowIndex="2">
         <Label fx:id="lblFromDate"/>

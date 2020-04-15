@@ -9,7 +9,9 @@
 <?import java.net.*?>
 <?import javafx.geometry.*?>
 
-<GridPane fx:id="gridPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<GridPane fx:id="gridPane" prefHeight="400.0" prefWidth="600.0" 
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controllers.LoginController">
 
     <Text text="Welcome"
         GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>

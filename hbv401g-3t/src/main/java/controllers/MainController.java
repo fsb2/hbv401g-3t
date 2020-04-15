@@ -18,6 +18,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -27,13 +29,16 @@ import javafx.stage.Stage;
 public class MainController {
 
     @FXML
-    private Button btnSignIn, btnSignUp;
+    private Button btnSignIn, btnSignUp, btnPrice;
 
     @FXML
-    private Label lblSearch, lblFromDate, lblToDate, lblHotels, lblFlights;
+    private Label lblPrice, lblFromDate, lblToDate, lblHotels, lblFlights;
 
     @FXML
     private TableView tvFlights, tvHotels;
+
+    @FXML
+    private TextField tfPrice;
 
     public MainController() {
     }
@@ -42,8 +47,9 @@ public class MainController {
     public void initialize() {
         btnSignUp.setText("Sign Up");
         btnSignIn.setText("Sign In");
+        btnPrice.setText("Calculate Price");
 
-        lblSearch.setText("Search engine");
+        lblPrice.setText("Pricing");
         lblFromDate.setText("From");
         lblToDate.setText("To");
         lblHotels.setText("Hotel list");
@@ -54,14 +60,32 @@ public class MainController {
 
         String fH = "/files/flightHeaders.txt";
         String fL = "/files/flights.txt";
-        String hH =  "/files/hotelHeaders.txt";
-        String hL =  "/files/hotels.txt";
-        
+        String hH = "/files/hotelHeaders.txt";
+        String hL = "/files/hotels.txt";
+
         listing(tvFlights, flights, fH, fL);
         listing(tvHotels, hotels, hH, hL);
-        
+
+        priceCalculationButtonHandler();
         signInButtonHandler();
         signUpButtonHandler();
+    }
+
+    // A handler for the price calculation button.
+    private void priceCalculationButtonHandler() {
+        btnPrice.setOnAction((event) -> {
+            int price = 0;
+            
+            if (!tvHotels.getSelectionModel().getSelectedCells().isEmpty()) {
+                price = (int) (500 + Math.random() * 1500);
+            }
+            
+            if (!tvFlights.getSelectionModel().getSelectedCells().isEmpty()) {
+                price = (int) (5000 + Math.random() * 1500);
+            }
+            
+            tfPrice.setText(String.valueOf(price));
+        });
     }
 
     // A handler for the sign in button.
@@ -95,9 +119,11 @@ public class MainController {
         });
     }
 
+    // This method fills the given table with values.
+    // The values are read from a text file.
     private void listing(TableView tv, ObservableList entities,
             String header, String list) {
-        
+
         entities = FXCollections.observableArrayList();
         List<TableColumn> headers = new ArrayList<>();
 
@@ -149,10 +175,19 @@ public class MainController {
 
         tv.getColumns().addAll(headers);
 
-        for (int i = 0; i < headers.size(); i++) {
-            headers.get(i).setCellValueFactory(
-                    new PropertyValueFactory<FlightEntity, String>(
-                            headers.get(i).getText()));
+        Object obj = entities.get(0).getClass();
+        if (obj == HotelEntity.class) {
+            for (int i = 0; i < headers.size(); i++) {
+                headers.get(i).setCellValueFactory(
+                        new PropertyValueFactory<String, HotelEntity>(
+                                headers.get(i).getText()));
+            }
+        } else {
+            for (int i = 0; i < headers.size(); i++) {
+                headers.get(i).setCellValueFactory(
+                        new PropertyValueFactory<String, FlightEntity>(
+                                headers.get(i).getText()));
+            }
         }
 
         tv.setItems(entities);

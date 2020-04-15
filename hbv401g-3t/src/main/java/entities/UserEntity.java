@@ -15,7 +15,6 @@ public class UserEntity {
     private static final String EXP_LOWER = "a-zðþæöáíóú";
     private static final String EXP_NUMBER = "0-9";
 
-    private double id; // This is not used at the moment.
     private int addressNumber;
     private Image photo; // Providing a photo is optional.
     private String screenName, email, password;
@@ -23,7 +22,6 @@ public class UserEntity {
 
     // Default constructor.
     public UserEntity(){
-        this.id = Math.random(); // Just an example of how an ID might be made.
     }
 
     // This constructor takes in values for all the private fields.
@@ -31,7 +29,6 @@ public class UserEntity {
             String password, String birthdate, String address,
             int addressNumber, String phone, String email) {
 
-        this.id = Math.random();
         this.firstName = isNameValid(firstName) ? firstName : null;
         this.lastName = isNameValid(lastName) ? lastName : null;
         this.password = isPasswordValid(password) ? password : null;
@@ -41,11 +38,6 @@ public class UserEntity {
                 ? (address + " " + String.valueOf(addressNumber)) : null;
         this.phone = isPhoneValid(phone) ? phone : null;
         this.email = isEmailValid(email)? email : null;
-    }
-
-    // Returning the given id.
-    public double getId() {
-        return id;
     }
 
     // Returning the given screen name (a.k.a. user name).

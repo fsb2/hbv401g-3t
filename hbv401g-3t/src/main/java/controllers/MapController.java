@@ -1,7 +1,6 @@
 package controllers;
 
 import com.sothawo.mapjfx.*;
-import com.sothawo.mapjfx.event.MapLabelEvent;
 import com.sothawo.mapjfx.Projection;
 
 import entities.MapEntity;
@@ -9,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
 import java.util.Scanner;
 import javafx.fxml.FXMLLoader;
 import java.util.HashMap;
@@ -24,16 +22,10 @@ public class MapController {
     @FXML
     private MapView locationMap;
 
-    @FXML
-    public TextField tripFrom;
-
-    @FXML
-    public TextField tripTo;
-
     final private List<MapEntity> mapFeatures;
 
     final private Map<String, Marker> features;
-
+    
     public MapController() {
         mapFeatures = new ArrayList<>();
         features = new HashMap<>();
@@ -78,10 +70,7 @@ public class MapController {
         } catch (IOException ex) {
             System.out.println(ex.getCause());
         }
-    }
 
-    // This returns the actual map.
-    public MapView mapBox(Projection projection) {
         locationMap.initializedProperty()
                 .addListener((observable, oldValue, newValue) -> {
                     if (newValue) {
@@ -89,41 +78,28 @@ public class MapController {
                     }
                 });
 
-        setupEventHandlers();
-
         locationMap.initialize(Configuration.builder()
-                .projection(projection)
+                .projection(Projection.WEB_MERCATOR)
                 .build());
+    }
 
+    // This returns the actual map.
+    public MapView mapBox() {
         return locationMap;
     }
 
-    private void setupEventHandlers() {
-        locationMap.addEventHandler(MapLabelEvent.MAPLABEL_CLICKED, event -> {
-            event.consume();
-            
-            String orig = event.getMapLabel().getText();
-            tripFrom.setText(orig);
-        });
-
-        locationMap.addEventHandler(MapLabelEvent.MAPLABEL_RIGHTCLICKED,
-                event -> {
-                    event.consume();
-                    String dest = event.getMapLabel().getText();
-                    tripTo.setText(dest);
-                });
-    }
-
+    // Post processing for the map.
+    // Here, the icons and labels are added.
     private void afterMapIsInitialized() {
         mapFeatures.stream().map((mf) -> {
-            final String str = mf.getCategory();
-            final String label = "/pictures/" + str + ".png";
-            final Coordinate cord = new Coordinate(mf.getCoordX(),
+            String str = mf.getCategory();
+            String label = "/pictures/" + str + ".png";
+            Coordinate cord = new Coordinate(mf.getCoordX(),
                     mf.getCoordY());
 
-            final Marker marker = new Marker(getClass().getResource(label),
-                    -20, -20).setPosition(cord).setVisible(true);
-
+            Marker marker = new Marker(getClass().getResource(label),
+                    -20, -20).setPosition(cord).setVisible(true);           
+            
             marker.attachLabel(new MapLabel(mf.getName(), 20, 20));
             return marker;
         }).map((marker) -> {
